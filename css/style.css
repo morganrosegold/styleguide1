@@ -555,14 +555,22 @@ th:last-child,
 td:last-child {
     padding-right: 0;
 }
-table, {
-    width: 100%;
+table {
+	width: 100%;
 }
-
-th, td {
-    border-bottom: 1px solid black;
-    padding: 12px;
-    text-align: left;
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; 
+}
+th:first-child,
+td:first-child {
+  padding-left: 0; 
+}
+th:last-child,
+td:last-child {
+  padding-right: 0; 
 }
 
 .tab {
@@ -647,11 +655,11 @@ img.headshot {
 }
 .containerTab {
     position: relative;
-    border-top: 1px soild #CCC;
+    border-top: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
  margin-top: 36px ;
 }
-.colsebtn {
+.closebtn {
     position: absolute;
     right: 0;
     top: 0;
@@ -715,7 +723,7 @@ img.headshot {
     font-size: 24px;
     position: absolute;
     top: 50%;
-    left: 36%
+    left: 36%;
     -webkit-transform: translate(-28%, -50%);
     -ms-transform: translate(-28%, -50%);
     transform: translate(-28%, -50%);
