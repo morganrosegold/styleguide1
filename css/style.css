@@ -515,7 +515,7 @@ select {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"], {
+input[type="button"] {
     display: inline-block;
     padding: 10px 5%;
     color: #FFF;
@@ -530,7 +530,7 @@ input[type="button"], {
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover, {
+input[type="button"]:hover {
     color: #FFF;
     border: 2px solid #5C41BG;
     background-color: #5C41BD;
@@ -555,6 +555,16 @@ th:last-child,
 td:last-child {
     padding-right: 0;
 }
+table, {
+    width: 100%;
+}
+
+th, td {
+    border-bottom: 1px solid black;
+    padding: 12px;
+    text-align: left;
+}
+
 .tab {
     overflow: hidden;
     border-bottom: 1px solid #ccc;
@@ -565,14 +575,14 @@ td:last-child {
     float: left;
     border: none;
     outline: none;
-    cursor: none;
+    cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
     font-weight: bold; 
     border-radius: 0;
     margin-left: 1px;
 }
-.tab button.active {
+.tab button:hover {
     background-color: #CAC7BB;
 }
 .tab button.active {
@@ -642,8 +652,76 @@ img.headshot {
  margin-top: 36px ;
 }
 .colsebtn {
-    position: relative
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 35px;
+    cursor: pointer;
 }
+.card {
+    background: #EEEEEE;
+    border-radius: 4px;
+    text-align: center;
+    padding: 2%;
+    transition: box-shadow 0.2s ease-out;
+}
+.card:hover {
+    box-shadow: 0 0px 8px 0 rgba(0,0,0,.25);
+}
+.card.three.columns {
+    width: 18%;
+}
+@media (max-width: 800px) {
+    .card.three.columns {
+        width: 43%;
+        margin: 0 1%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 800px) {
+    .card.three.columns {
+        width: 94%
+    }
+}
+.card h5 {
+    margin: 0;
+}
+.card h6 {
+    margin: 24px 0;
+}
+.card p {
+    margin: 0:
+}
+.image-container {
+    position: relative;
+}
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(116,83,239,0.80);
+}
+.image-container:hover .overlay {
+    opacity: 1;
+}
+.image-container .text {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 36%
+    -webkit-transform: translate(-28%, -50%);
+    -ms-transform: translate(-28%, -50%);
+    transform: translate(-28%, -50%);
+    text-align: center;
+}
+
 
 footer {
     border-top: 1px solid #E1E1E1;
